@@ -9,18 +9,18 @@ int main()
 {
     static int array1[10][10], array2[10][10];
     int i, j, m, n, a, b, c, p, q, r;
-        printf("Enter no. of rows: ");
-        scanf("%d", &m);
-        printf("\nEnter no. of cols: ");
-        scanf("%d",&n);
-        printf("\nEnter values to the matrix: \n");
-        for (i = 0; i < m; i++)
-            for (j = 0; j < n; j++)
-            {
-                 printf("Enter a[%d][%d] value: ",i,j);
-                 scanf("%d", &array1[i][j]);
-                 array2[i][j] = array1[i][j];
-            }
+    printf("Enter no. of rows: ");
+    scanf("%d", &m);
+    printf("\nEnter no. of cols: ");
+    scanf("%d",&n);
+    printf("\nEnter values to the matrix: \n");
+    for (i = 0; i < m; i++)
+        for (j = 0; j < n; j++)
+        {
+             printf("Enter a[%d][%d] value: ",i,j);
+             scanf("%d", &array1[i][j]);
+             array2[i][j] = array1[i][j];
+        }
     printf("\nThe given matrix is \n\n");
         for (i = 0; i < m; ++i)
         {
@@ -29,30 +29,30 @@ int main()
             printf("\n\n");
         }
     for(a = 0, b = n-1; a < n/2; a++, b--)
-        for (i = 0; i < m; ++i)
+        for (i = 0; i < m; i++)
         {
             c = array1[a - 1][i];
             array1[a - 1][i] = array1[b - 1][i];
             array1[b - 1][i] = c;
         }
     for(p = 0, q = n-1; a < n/2; p++, q--)
-    for (i = 1; i < n; ++i)
-    {
-        r = array2[i][p - 1];
-        array2[i][p - 1] = array2[i][q - 1];
-        array2[i][q - 1] = r;
-    }
+        for (i = 0; i < n; i++)
+        {
+            r = array2[i][p - 1];
+            array2[i][p - 1] = array2[i][q - 1];
+            array2[i][q - 1] = r;
+        }
     printf("\nThe matix after interchanging the two rows ::  \n");
-    for (i = 0; i < m; ++i)
+    for (i = 0; i < m; i++)
     {
-        for (j = 0; j < n; ++j)
+        for (j = 0; j < n; j++)
             printf("\t%d", array1[i][j]);
         printf("\n\n");
     }
     printf("\nThe matix after interchanging the two columns :: \n");
-    for (i = 0; i < m; ++i)
+    for (i = 0; i < m; i++)
     {
-        for (j = 0; j < n; ++j)
+        for (j = 0; j < n; j++)
             printf("\t%d", array2[i][j]);
         printf("\n\n");
     } 

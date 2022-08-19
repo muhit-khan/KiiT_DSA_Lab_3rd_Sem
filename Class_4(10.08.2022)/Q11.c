@@ -24,8 +24,10 @@ int main() {
             p += 1;
         }
         else
+        {
             *(restruct+q) = *(data+i);
             q -= 1;
+        }
     }
     printf("\nModified Array: ");
     for (int i = 0; i < n; i++) {
