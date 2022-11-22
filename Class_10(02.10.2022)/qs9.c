@@ -40,16 +40,6 @@ struct node *newNode(int data)
 
 int main()
 {
-    /*
-      The input tree is as shown below
-                  40
-                  / \
-              20        60
-              / \       \
-          10        30      80
-                            \
-                              90
-    */
     struct node *root = newNode(40);
     root->left = newNode(20);
     root->right = newNode(60);
@@ -62,23 +52,14 @@ int main()
     else
         printf("TREE 1 Not a BST");
     prev = NULL;
-    /*
-        The input tree is as shown below
-                    50
-                    / \
-                20        30
-                / \
-            70        80
-            / \          \
-        10     40     60
-    */
+
     struct node *root1 = newNode(50);
     root1->left = newNode(20);
     root1->right = newNode(30);
     root1->left->left = newNode(70);
     root1->left->right = newNode(80);
     root1->left->left->right = newNode(40);
-    root1->left->left->leftt = newNode(90);
+    root1->left->left->left = newNode(90);
     if (is_bst1(root1))
         printf("TREE 2 Is BST");
     else
