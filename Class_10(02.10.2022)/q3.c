@@ -82,5 +82,5 @@ int totalNodes(struct node *tree)
     if (tree == NULL)
         return 0;
     else
-        return (totalNodes(tree->left) + totalNodes(tree->right) + 1);
+        return (totalNodes(tree->left) + totalNodes(tree->right) + 1);
 }
