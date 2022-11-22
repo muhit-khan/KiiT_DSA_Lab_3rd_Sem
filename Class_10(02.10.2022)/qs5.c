@@ -1,13 +1,3 @@
-/*
- * C Program to Print Height and Depth of given Binary Tree
- *                                        50
- *                                       /  \
- *                                      20   30
- *                                     /  \
- *                                    70  80
- *                                   / \    \
- *                                  10  40   60
- */
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -86,9 +76,7 @@ void main()
         else
             ptr = ptr->r;
     }
-    /*
-     *DEPTH IS CONSIDERED FROM LEVEL-0 ALSO HEIGHT IS CONSIDERED AS NUMBER OF EDGES
-     */
+
     if (depth1 > depth2)
         printf("height of the tree is %d\ndepth of the tree is %d", depth1, depth1);
     else

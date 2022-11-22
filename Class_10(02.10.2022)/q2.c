@@ -95,5 +95,5 @@ int totalInternalNodes(struct node *tree)
     if ((tree == NULL) || ((tree->left == NULL) && (tree->right == NULL)))
         return 0;
     else
-        return (totalInternalNodes(tree->left) + totalInternalNodes(tree->right) + 1);
+        return (totalInternalNodes(tree->left) + totalInternalNodes(tree->right) + 1);
 }

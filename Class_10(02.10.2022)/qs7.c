@@ -4,9 +4,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-/*
- * structure of node
- */
 struct btnode
 {
     int value;
@@ -30,16 +27,7 @@ int main()
     createbinary();
     print();
 }
-/*
- * constructing the following binary tree
- *     50
- *     / \
- *    20 30
- *   / \
- *  70 80
- * / \     \
- *10 40      60
- */
+
 void createbinary()
 {
     root = add(50);
@@ -52,9 +40,6 @@ void createbinary()
     root->l->r->r = add(60);
 }
 
-/*
- * Adding node to binary tree
- */
 node *add(int val)
 {
     ptr = (node *)malloc(sizeof(node));
@@ -69,9 +54,6 @@ node *add(int val)
     return ptr;
 }
 
-/*
- * Prints all the nodes of all levels of the binary tree
- */
 void print()
 {
     int h, i;
@@ -84,9 +66,7 @@ void print()
         printf("\n");
     }
 }
-/*
- *Prints the nodes of a particular level
- */
+
 void printlevel(node *n, int desired, int current)
 {
     if (n)
@@ -101,9 +81,6 @@ void printlevel(node *n, int desired, int current)
     }
 }
 
-/*
- * Height of the binary tree
- */
 int height(node *n)
 {
     int lheight, rheight;

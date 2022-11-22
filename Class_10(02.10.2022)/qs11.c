@@ -1,9 +1,7 @@
-/*
- * C++ Program For Inorder Tree Traversal without recursion
- */
 #include <iostream>
-using namespace std;
 #include <conio.h>
+
+using namespace std;
 struct tree
 {
     tree *l, *r;

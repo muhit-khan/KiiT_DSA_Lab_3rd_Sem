@@ -8,10 +8,6 @@ struct node
     struct node *left, *right;
 };
 
-/*
- * Function to create new nodes
- */
-
 struct node *createnode(int key)
 {
     struct node *newnode = (struct node *)malloc(sizeof(struct node));
@@ -21,10 +17,6 @@ struct node *createnode(int key)
 
     return (newnode);
 }
-
-/*
- * Function to count number of leaf nodes
- */
 
 int count = 0;
 int leafnodes(struct node *newnode)
@@ -42,13 +34,8 @@ int leafnodes(struct node *newnode)
     return count;
 }
 
-/*
- * Main Function
- */
-
 int main()
 {
-    /* Creating first Tree.*/
 
     struct node *newnode = createnode(25);
     newnode->left = createnode(27);
@@ -58,16 +45,6 @@ int main()
     newnode->right->left = createnode(13);
     newnode->right->right = createnode(55);
 
-    /* Sample Tree 1- Balanced Tree
-
-
-                    25
-                  /    \
-                 27     19
-                / \     / \
-              17  91   13 55
-
-    */
     printf("Number of leaf nodes in first Tree are\t%d\n", leafnodes(newnode));
     count = 0;
 
@@ -77,30 +54,10 @@ int main()
     node->right->right->right = createnode(4);
     node->right->right->right->right = createnode(5);
 
-    /* Sample Tree 2-   Right Skewed Tree (Unbalanced).
-
-                    1
-                     \
-                      2
-                       \
-                        3
-                         \
-                          4
-                           \
-                            5
-    */
-
     printf("\nNumber of leaf nodes in second tree are\t%d\n", leafnodes(node));
     count = 0;
 
-    /*Creating third Tree. */
-
     struct node *root = createnode(15);
-
-    /* Sample Tree 3-  Tree having just one root node.
-
-                   15
-    */
 
     printf("\nNumber of leaf nodes in third tree are\t%d", leafnodes(root));
 
